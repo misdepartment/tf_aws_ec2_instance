@@ -14,11 +14,6 @@ variable "ami_id" {
   description = "The AMI to use"
 }
 
-variable "number_of_instances" {
-  description = "number of instances to make"
-  default = 1
-}
-
 variable "user_data" {
   description = "The path to a file with user_data for the instances"
 }
@@ -28,8 +23,3 @@ variable "tags" {
     created_by = "terraform"
  }
 }
-
-// Variables for providers used in this module
-variable "aws_access_key" {}
-variable "aws_secret_key" {}
-variable "aws_region" {}
