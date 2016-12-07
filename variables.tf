@@ -34,3 +34,6 @@ variable "source_dest" {
 variable "public_ip" {
   default = true
 }
+variable "security_groups" {
+  default = []
+}
