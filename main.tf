@@ -5,6 +5,9 @@ resource "aws_instance" "ec2_instance" {
     instance_type = "${var.instance_type}"
     user_data = "${var.user_data}"
     iam_instance_profile = "${var.instance_profile}"
+    key_name = "${var.key_name}"
+    source_dest_check = "${var.source_dest}"
+    associate_public_ip_address = "${var.public_ip}"
     
     tags {
         created_by = "${lookup(var.tags,"created_by")}"
