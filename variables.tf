@@ -35,5 +35,6 @@ variable "public_ip" {
   default = true
 }
 variable "security_groups" {
+  type = "list"
   default = []
 }
