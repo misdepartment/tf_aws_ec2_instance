@@ -9,7 +9,7 @@ resource "aws_instance" "ec2_instance" {
     source_dest_check = "${var.source_dest}"
     associate_public_ip_address = "${var.public_ip}"
     
-    security_groups = "${var.security_groups}"
+    security_groups = ["${var.security_groups}"]
     
     tags {
         created_by = "${lookup(var.tags,"created_by")}"
