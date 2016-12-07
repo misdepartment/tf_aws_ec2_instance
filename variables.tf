@@ -24,3 +24,13 @@ variable "tags" {
     created_by = "terraform"
  }
 }
+
+variable "key_name" {
+  default = ""
+}
+variable "source_dest" {
+  default = true
+}
+variable "public_ip" {
+  default = true
+}
