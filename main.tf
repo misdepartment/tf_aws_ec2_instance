@@ -4,6 +4,8 @@ resource "aws_instance" "ec2_instance" {
     subnet_id = "${var.subnet_id}"
     instance_type = "${var.instance_type}"
     user_data = "${var.user_data}"
+    iam_instance_profile = "${var.instance_profile}"
+    
     tags {
         created_by = "${lookup(var.tags,"created_by")}"
         Name = "${var.instance_name}"
