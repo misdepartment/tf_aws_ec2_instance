@@ -38,3 +38,13 @@ variable "security_groups" {
   type = "list"
   default = []
 }
+
+variable "ebs_optimized" {
+  default = false
+}
+variable "root_block_type" {
+  default = "gp2"
+}
+variable "root_block_size" {
+  default = "8"
+}
