@@ -8,6 +8,12 @@ resource "aws_instance" "ec2_instance" {
     key_name = "${var.key_name}"
     source_dest_check = "${var.source_dest}"
     associate_public_ip_address = "${var.public_ip}"
+    ebs_optimized = "${var.ebs_optimized}"
+    
+    root_block_device {
+        volume_type = "${var.root_block_type}"
+        volume_size = "${var.root_block_size}"        
+    }
     
     security_groups = ["${var.security_groups}"]
     
