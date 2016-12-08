@@ -15,7 +15,7 @@ resource "aws_instance" "ec2_instance" {
         volume_size = "${var.root_block_size}"        
     }
     
-    security_groups = ["${var.security_groups}"]
+    vpc_security_group_ids = ["${var.security_groups}"]
     
     tags {
         created_by = "${lookup(var.tags,"created_by")}"
