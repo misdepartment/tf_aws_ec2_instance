@@ -5,7 +5,9 @@ variable "instance_name" {
 }
 
 variable "instance_type" {}
-variable "instance_profile" {}
+variable "instance_profile" {
+  default = ""
+}
 
 variable "subnet_id" {
   description = "The VPC subnet the instance(s) will go in"
