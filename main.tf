@@ -12,7 +12,8 @@ resource "aws_instance" "ec2_instance" {
     
     root_block_device {
         volume_type = "${var.root_block_type}"
-        volume_size = "${var.root_block_size}"        
+        volume_size = "${var.root_block_size}"     
+        encrypted = true
     }
     
     vpc_security_group_ids = ["${var.security_groups}"]
